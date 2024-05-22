@@ -3,18 +3,17 @@ import { destinations } from "../utils/data";
 import DestinationCard from "../layouts/DestinationCard";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import img1 from "../assets/img/dest1.jpg";
+import img2 from "../assets/img/dest2.jpg";
+import img3 from "../assets/img/dest3.jpg";
+import img4 from "../assets/img/dest4.jpg";
+import img5 from "../assets/img/dest5.webp";
+import img6 from "../assets/img/dest6.jpg";
+import img7 from "../assets/img/dest7.jpg";
+import img8 from "../assets/img/dest8.jpg";
+import img9 from "../assets/img/dest9.webp";
 
-const images = [
-  "./src/assets/img/dest1.jpg",
-  "./src/assets/img/dest2.jpg",
-  "./src/assets/img/dest3.jpg",
-  "./src/assets/img/dest4.jpg",
-  "./src/assets/img/dest5.webp",
-  "./src/assets/img/dest6.jpg",
-  "./src/assets/img/dest7.jpg",
-  "./src/assets/img/dest8.jpg",
-  "./src/assets/img/dest9.webp",
-];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 const Destination = () => {
   useEffect(() => {
@@ -22,14 +21,14 @@ const Destination = () => {
       once: true,
       duration: 1000,
     });
-  });
+  }, []);
 
   return (
     <div
-      className=" min-h-screen flex flex-col justify-center md:mx-32 mx-5"
+      className="min-h-screen flex flex-col justify-center md:mx-32 mx-5"
       data-aos="fade-left"
     >
-      <h1 className=" font-medium text-center text-4xl lg:mt-0 mt-16">
+      <h1 className="font-medium text-center text-4xl lg:mt-0 mt-16">
         Destinasi Terpopuler
       </h1>
 
