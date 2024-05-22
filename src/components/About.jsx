@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import img from "../assets/img/dest6.jpg";
+import img from "../assets/img/dest7.jpg";
 import Button from "../layouts/Button";
 import { Link } from "react-scroll";
 import Aos from "aos";
@@ -16,7 +16,7 @@ const About = () => {
   const backgroundColor = `bg-white`;
   return (
     <div
-      className=" min-h-screen flex flex-col justify-center lg:flex-row items-center md:px-32 px-5 my-10 bg-darkBackground gap-10"
+      className=" min-h-screen flex flex-col justify-center lg:flex-row items-center md:px-32 px-5 py-8 my-5 bg-darkBackground gap-10"
       data-aos="fade-right"
     >
       <div className=" w-full lg:w-2/4 space-y-5">
