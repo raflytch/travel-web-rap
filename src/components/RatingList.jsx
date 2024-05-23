@@ -21,7 +21,7 @@ const RatingList = () => {
   });
 
   return (
-    <div data-aos="fade-left">
+    <div data-aos="fade-right">
       <div>
         <h1 className="text-5xl font-bold text-center mb-10 text-darkBackground">
           Testimonial
