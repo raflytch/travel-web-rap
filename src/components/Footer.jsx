@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div
       className="bg-darkBackground text-white rounded-t-lg"
-      data-aos="fade-left"
+      data-aos="fade-up"
     >
       <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
         <div className=" w-full md:w-1/4">
