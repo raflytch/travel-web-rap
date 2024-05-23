@@ -26,7 +26,7 @@ const Destination = () => {
   return (
     <div
       className="min-h-screen flex flex-col justify-center md:mx-32 mx-5"
-      data-aos="fade-left"
+      data-aos="fade-right"
     >
       <h1 className="font-medium text-center text-4xl lg:mt-0 mt-16">
         Destinasi Terpopuler
