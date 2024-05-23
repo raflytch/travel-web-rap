@@ -7,38 +7,33 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import RatingList from "./components/RatingList";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-
       <main>
+        <Outlet /> {/* Ini akan merender rute bersarang */}
         <div id="home">
           <Home />
         </div>
-
         <div id="features">
           <Features />
         </div>
-
         <div id="destination">
           <Destination />
         </div>
-
         <div id="about">
           <About />
         </div>
-
         <div id="contact">
           <Contact />
         </div>
-
         <div>
           <RatingList />
         </div>
       </main>
-
       <Footer />
     </div>
   );

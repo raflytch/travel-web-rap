@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 import Button from "../layouts/Button";
 import { AiOutlineMenu } from "react-icons/ai";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     Aos.init({
       once: true,
       duration: 1000,
     });
-  });
+  }, []);
 
   const [menu, setMenu] = useState(false);
 
@@ -21,18 +24,22 @@ const Navbar = () => {
 
   const backgroundColor = `bg-white`;
 
+  const handleNavigateToLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="sticky top-0 w-full z-50" data-aos="fade-down">
       <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white">
         <div className=" flex items-center">
-          <Link to="/" spy={true} smooth={true} duration={500}>
+          <ScrollLink to="/" spy={true} smooth={true} duration={500}>
             <h1 className=" font-semibold text-xl cursor-pointer">
               TravelWithRap
             </h1>
-          </Link>
+          </ScrollLink>
         </div>
         <nav className="hidden lg:flex flex-row items-center gap-6">
-          <Link
+          <ScrollLink
             to="home"
             spy={true}
             smooth={true}
@@ -40,8 +47,8 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
           >
             Beranda
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="features"
             spy={true}
             smooth={true}
@@ -49,8 +56,8 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
           >
             Fitur
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="destination"
             spy={true}
             smooth={true}
@@ -58,8 +65,8 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
           >
             Destinasi
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="about"
             spy={true}
             smooth={true}
@@ -67,8 +74,8 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
           >
             Tentang
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="contact"
             spy={true}
             smooth={true}
@@ -76,14 +83,21 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
           >
             Kontak
-          </Link>
+          </ScrollLink>
         </nav>
 
         <div className="hidden lg:flex flex-row items-center gap-4">
-          <h1 className="hover:text-brightColor transition-all cursor-pointer">
+          <h1
+            className="hover:text-brightColor transition-all cursor-pointer"
+            onClick={handleNavigateToLogin}
+          >
             Daftar
           </h1>
-          <Button title="Masuk" backgroundColor={backgroundColor} />
+          <Button
+            title="Masuk"
+            backgroundColor={backgroundColor}
+            onClick={handleNavigateToLogin}
+          />
         </div>
 
         <div
@@ -98,7 +112,7 @@ const Navbar = () => {
           menu ? "translate-x-0" : "-translate-x-full"
         } lg:hidden flex flex-col absolute bg-darkBackground text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}
       >
-        <Link
+        <ScrollLink
           to="home"
           spy={true}
           smooth={true}
@@ -106,8 +120,8 @@ const Navbar = () => {
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Beranda
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="features"
           spy={true}
           smooth={true}
@@ -115,8 +129,8 @@ const Navbar = () => {
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Fitur
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="destination"
           spy={true}
           smooth={true}
@@ -124,8 +138,8 @@ const Navbar = () => {
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Destinasi
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="about"
           spy={true}
           smooth={true}
@@ -133,8 +147,8 @@ const Navbar = () => {
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Tentang
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="contact"
           spy={true}
           smooth={true}
@@ -142,13 +156,20 @@ const Navbar = () => {
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Kontak
-        </Link>
+        </ScrollLink>
 
         <div className="flex flex-col lg:hidden lg:flex-row items-center gap-4">
-          <h1 className="hover:text-brightColor transition-all cursor-pointer">
+          <h1
+            className="hover:text-brightColor transition-all cursor-pointer"
+            onClick={handleNavigateToLogin}
+          >
             Daftar
           </h1>
-          <Button title="Masuk" backgroundColor={backgroundColor} />
+          <Button
+            title="Masuk"
+            backgroundColor={backgroundColor}
+            onClick={handleNavigateToLogin}
+          />
         </div>
       </div>
     </div>
