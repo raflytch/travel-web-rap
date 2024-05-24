@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <Navbar />
       <main>
-        <Outlet /> {/* Ini akan merender rute bersarang */}
+        <Outlet />
         <div id="home">
           <Home />
         </div>

@@ -6,15 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const backgroundColor = `bg-[#19A7CE]`;
 
-const FormLogin = () => {
+const FormRegister = () => {
   const navigate = useNavigate();
 
-  const handleNavigateToRegister = (event) => {
-    event.preventDefault();
-    navigate("/register");
+  const handleNavigateToLogin = () => {
+    navigate("/login");
   };
 
-  const handleLogin = (event) => {
+  const handleRegister = (event) => {
     event.preventDefault();
 
     navigate("/404");
@@ -22,7 +21,7 @@ const FormLogin = () => {
 
   return (
     <form
-      onSubmit={handleLogin}
+      onSubmit={handleRegister}
       className="space-y-6 w-full mt-10 md:w-1/3 mx-auto p-5 rounded-xl"
     >
       <div>
@@ -37,21 +36,28 @@ const FormLogin = () => {
           name="password"
         />
       </div>
+      <div>
+        <Label input="confirmPassword">Konfirmasi Password</Label>
+        <Input
+          type="password"
+          placeholder="Masukkan kembali password"
+          name="confirmPassword"
+        />
+      </div>
       <div className="text-center mt-4 text-sm flex flex-row gap-1">
-        <p>Tidak ada akun?</p>
-        <a
-          href="#"
-          onClick={handleNavigateToRegister}
+        <p>Sudah ada akun?</p>
+        <span
+          onClick={handleNavigateToLogin}
           className="text-blue-500 hover:font-semibold hover:transition duration-500 cursor-pointer"
         >
-          Daftar
-        </a>
+          Masuk
+        </span>
       </div>
       <div className="flex flex-col items-center justify-between">
-        <Button title="Login" backgroundColor={backgroundColor} />
+        <Button title="Daftar" backgroundColor={backgroundColor} />
       </div>
     </form>
   );
 };
 
-export default FormLogin;
+export default FormRegister;

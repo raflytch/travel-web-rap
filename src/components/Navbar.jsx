@@ -28,6 +28,10 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  const handleNavigateToRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="sticky top-0 w-full z-50" data-aos="fade-down">
       <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white">
@@ -89,7 +93,7 @@ const Navbar = () => {
         <div className="hidden lg:flex flex-row items-center gap-4">
           <h1
             className="hover:text-brightColor transition-all cursor-pointer"
-            onClick={handleNavigateToLogin}
+            onClick={handleNavigateToRegister}
           >
             Daftar
           </h1>
@@ -161,7 +165,7 @@ const Navbar = () => {
         <div className="flex flex-col lg:hidden lg:flex-row items-center gap-4">
           <h1
             className="hover:text-brightColor transition-all cursor-pointer"
-            onClick={handleNavigateToLogin}
+            onClick={handleNavigateToRegister}
           >
             Daftar
           </h1>
