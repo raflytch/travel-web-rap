@@ -5,6 +5,7 @@ import Button from "../layouts/Button";
 import { AiOutlineMenu } from "react-icons/ai";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { FaPaperPlane } from "react-icons/fa";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -37,9 +38,12 @@ const Navbar = () => {
       <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white">
         <div className=" flex items-center">
           <ScrollLink to="/" spy={true} smooth={true} duration={500}>
-            <h1 className=" font-semibold text-xl cursor-pointer">
-              TravelWithRap
-            </h1>
+            <div className="flex items-center gap-2">
+              <FaPaperPlane size={25} />
+              <h1 className=" font-semibold text-xl cursor-pointer">
+                TravelWithRap
+              </h1>
+            </div>
           </ScrollLink>
         </div>
         <nav className="hidden lg:flex flex-row items-center gap-6">
